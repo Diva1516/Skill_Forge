@@ -1,0 +1,310 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.welcome-section h1 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.welcome-section p {
+  color: var(--text-secondary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stat-icon-wrapper.streak { background-color: var(--warning); }
+.stat-icon-wrapper.xp { background-color: var(--brand-primary); }
+.stat-icon-wrapper.topics { background-color: var(--success); }
+
+.stat-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.stat-info p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.dashboard-section {
+  margin-bottom: 2rem;
+}
+
+.roadmap-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.roadmap-info {
+  flex: 1;
+}
+
+.roadmap-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar-bg {
+  flex: 1;
+  height: 8px;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--brand-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease-out;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.roadmap-action p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.roadmap-action strong {
+  color: var(--text-primary);
+}
+
+.challenge-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.challenge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.challenge-icon {
+  color: var(--brand-primary);
+}
+
+.difficulty-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.difficulty-badge.easy { background-color: rgba(16, 185, 129, 0.1); color: var(--success); }
+.difficulty-badge.medium { background-color: rgba(245, 158, 11, 0.1); color: var(--warning); }
+.difficulty-badge.hard { background-color: rgba(239, 68, 68, 0.1); color: var(--danger); }
+
+.challenge-card h3 {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.challenge-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--success);
+  background-color: rgba(16, 185, 129, 0.1);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+.w-full { width: 100%; }
+.justify-center { justify-content: center; }
+
+/* Timeline Activity */
+.activity-timeline {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.timeline-items::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--brand-primary);
+  margin-top: 5px;
+  border: 2px solid var(--bg-primary);
+}
+
+.timeline-dot.bg-blue { background-color: var(--brand-primary); }
+.timeline-dot.bg-green { background-color: var(--success); }
+
+.timeline-content p {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.text-muted { color: var(--text-tertiary); }
+.text-sm { font-size: 0.75rem; }
+
+/* Goals List */
+.goals-list {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.goal-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-secondary);
+}
+
+.goal-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all var(--transition-fast);
+}
+
+.goal-checkbox.completed {
+  background-color: var(--success);
+  border-color: var(--success);
+}
+
+.completed-text {
+  text-decoration: line-through;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 900px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .roadmap-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+}

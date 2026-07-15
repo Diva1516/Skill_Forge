@@ -1,0 +1,144 @@
+.daily-challenge-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: calc(100vh - var(--header-height) - 4rem);
+}
+
+.challenge-layout {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  min-height: 500px;
+}
+
+.challenge-problem {
+  flex: 1;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.problem-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.problem-header h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.problem-description {
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hint-box {
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.hint-box h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--warning);
+  margin-bottom: 0.5rem;
+}
+
+.hint-box p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.challenge-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+  font-family: monospace;
+}
+
+.completed-badge {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--success);
+  font-size: 0.875rem;
+}
+
+.code-textarea {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Fira Code', monospace;
+  padding: 1.5rem;
+  border: none;
+  resize: none;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.code-textarea:focus {
+  outline: none;
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #2d2d2d;
+  border-top: 1px solid #444;
+}
+
+.output-console {
+  background-color: #000;
+  border-top: 1px solid #444;
+  min-height: 150px;
+}
+
+.console-header {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  border-bottom: 1px solid #333;
+}
+
+.output-console pre {
+  padding: 1rem;
+  margin: 0;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.output-console pre.success { color: #4ade80; }
+.output-console pre.error { color: #f87171; }
+
+@media (max-width: 900px) {
+  .challenge-layout {
+    flex-direction: column;
+  }
+}

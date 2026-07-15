@@ -1,0 +1,209 @@
+.roadmaps-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.roadmaps-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.roadmaps-sidebar {
+  width: 250px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  flex-shrink: 0;
+}
+
+.roadmaps-sidebar h3 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.roadmap-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.roadmap-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.roadmap-tab:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.roadmap-tab.active {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--brand-primary);
+  font-weight: 500;
+}
+
+.roadmap-content {
+  flex: 1;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.roadmap-header {
+  margin-bottom: 3rem;
+}
+
+.roadmap-header h2 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-header p {
+  color: var(--text-secondary);
+}
+
+.roadmap-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.roadmap-module {
+  display: flex;
+  gap: 1.5rem;
+  min-height: 150px;
+}
+
+.module-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+}
+
+.connector-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  z-index: 2;
+}
+
+.connector-dot.completed { color: var(--success); }
+.connector-dot.available { color: var(--brand-primary); }
+.connector-dot.locked { color: var(--text-tertiary); }
+
+.connector-line {
+  flex: 1;
+  width: 2px;
+  background-color: var(--border-color);
+  margin: 0.25rem 0;
+}
+
+.connector-line.completed { background-color: var(--success); }
+
+.module-card {
+  flex: 1;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform var(--transition-fast);
+}
+
+.roadmap-module.available .module-card:hover {
+  transform: translateX(5px);
+  border-color: var(--brand-primary-hover);
+}
+
+.roadmap-module.locked .module-card {
+  opacity: 0.6;
+  background-color: transparent;
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.module-header h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.status-badge.completed { background-color: rgba(16, 185, 129, 0.1); color: var(--success); }
+.status-badge.available { background-color: rgba(99, 102, 241, 0.1); color: var(--brand-primary); }
+.status-badge.locked { background-color: var(--bg-tertiary); color: var(--text-secondary); }
+
+.module-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.module-topics li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.topic-icon {
+  color: var(--brand-primary);
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.btn-outline:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+@media (max-width: 768px) {
+  .roadmaps-container {
+    flex-direction: column;
+  }
+  .roadmaps-sidebar {
+    width: 100%;
+  }
+}
